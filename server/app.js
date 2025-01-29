@@ -19,7 +19,7 @@ app.use(express.json());
 // Middleware for CORS
 const allowedOrigins = [
   "http://localhost:3001",
-  // "https://referral-management",
+  "https://referral-management-seven.vercel.app/",
   "*",
 ];
 
