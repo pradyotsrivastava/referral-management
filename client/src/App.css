@@ -1,0 +1,597 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Form Elements */
+input,
+button,
+select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input[type="file"] {
+  padding: 0.5rem;
+  border: none;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+button {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+div {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Referral Form Styles */
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-heading {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.file-input {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.submit-btn {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Mobile Responsiveness for Referral Form */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .form-input,
+  .file-input,
+  .submit-btn {
+    font-size: 0.875rem;
+  }
+
+  .form-heading {
+    font-size: 1.5rem;
+  }
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-input:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+.candidate-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Mobile Responsiveness for Dashboard */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1.5rem;
+  }
+
+  .dashboard-heading {
+    font-size: 1.5rem;
+  }
+
+  .search-input {
+    font-size: 0.875rem;
+  }
+}
+
+/* Candidate Card Styles */
+.candidate-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.candidate-card:hover {
+  transform: translateY(-5px);
+}
+
+.candidate-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.candidate-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.status-select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  width: 100%;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease;
+}
+
+.status-select:focus {
+  border-color: #3b82f6;
+}
+
+.status-select option {
+  padding: 0.5rem;
+}
+
+/* Candidate Status Styling */
+.candidate-card .status {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.candidate-card .status.pending {
+  color: orange;
+}
+
+.candidate-card .status.reviewed {
+  color: green;
+}
+
+.candidate-card .status.hired {
+  color: blue;
+}
+
+/* Mobile Responsiveness for Candidate Card */
+@media (max-width: 768px) {
+  .candidate-card {
+    padding: 1rem;
+  }
+
+  .candidate-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .candidate-card p {
+    font-size: 0.875rem;
+  }
+
+  .status-select {
+    font-size: 0.875rem;
+  }
+}
+
+/* Mobile Friendly Buttons & Inputs */
+@media (max-width: 480px) {
+  button {
+    width: 100%;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+
+  .candidate-card {
+    padding: 0.75rem;
+  }
+}
+
+/* App Container Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+  padding: 20px;
+  margin: 0;
+}
+
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header Styles */
+
+/* Header Container Styles */
+.header-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 2rem; 
+  width: 100%;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  flex-grow: 1; 
+  text-align: center; 
+}
+
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Button Group Styles */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: fit-content;
+  width: 25%; 
+  margin-top: 20px; 
+}
+
+.nav-btn {
+  padding: 0.8rem 1rem; 
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block; 
+}
+
+.nav-btn:hover {
+  background-color: #2563eb;
+}
+
+.nav-btn.active {
+  background-color: #2563eb; 
+}
+
+/* Content Container */
+.content-container {
+  margin-top: 20px;
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+  .nav-btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .app-container {
+    padding: 10px;
+  }
+
+  .app-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.modal-container input,
+.modal-container button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid #ccc;
+}
+
+.modal-container button {
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-container button:hover {
+  background-color: #2563eb;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap : 3rem
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .modal-container {
+    width: 90%;
+  }
+}
+
+/* File Input Styles */
+.file-input {
+  display: none; 
+}
+
+.resume-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.resume-button {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background-color: #3b82f6;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: auto;
+  text-decoration: none;
+}
+
+.resume-button:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.resume-button:focus {
+  outline: none;
+}
+
+/* Styling for file name preview */
+.file-name {
+  font-size: 0.875rem;
+  color: #4a4a4a;
+  margin-top: 0.5rem;
+  display: block;
+  font-weight: normal;
+}
+
+/* Styling for the container holding the resume input and name */
+.resume-container:hover .resume-button {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Style the container to make it look like a button */
+.form-resume {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background-color: #d485f1;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  gap: 0.5rem;
+  margin-top: 10px;
+}
+
+
+/* DASHBOARD DASHBOARD  */
+
+.dashboard-btn-grp{
+  display: flex;
+  justify-content: flex-start; 
+  gap: 1rem; 
+  flex-wrap: nowrap; 
+  width: 100%;
+}
+
+/* Style for the status filter buttons container */
+.status-buttons {
+  display: flex; 
+  gap: 2rem; 
+  margin-bottom: 20px; 
+
+  
+}
+
+/* Style for each individual button */
+.status-buttons button {
+  background-color: #ca4df4; 
+  border: 1px solid #ccc; 
+  padding: 10px 15px; 
+  font-size: 14px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+}
+
+/* Active button style (selected state) */
+.status-buttons button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff; 
+}
+
+/* Style for buttons on hover */
+.status-buttons button:hover {
+  background-color: #3f36de; 
+}
