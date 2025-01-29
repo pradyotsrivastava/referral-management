@@ -45,8 +45,8 @@ if (!fs.existsSync(uploadsDir)) {
 }
 
 // Routes
-app.use("/api/auth", authRoutes);
-app.use("/api/candidates", candidateRoutes);
+app.use("api/auth", authRoutes);
+app.use("api/candidates", candidateRoutes);
 
 // Connect to MongoDB
 connectDB();
